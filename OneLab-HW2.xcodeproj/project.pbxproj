@@ -21,7 +21,9 @@
 		C09BF72B280C21590020F339 /* NewUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BF72A280C21590020F339 /* NewUserCell.swift */; };
 		C09BF72D280C22120020F339 /* AddNewFriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BF72C280C22120020F339 /* AddNewFriendViewModel.swift */; };
 		C09BF72F280C38990020F339 /* NewUserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BF72E280C38990020F339 /* NewUserCellViewModel.swift */; };
-		C09BF735280C40210020F339 /* Button+Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BF734280C40210020F339 /* Button+Extencion.swift */; };
+		C09BF735280C40210020F339 /* Button+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BF734280C40210020F339 /* Button+Ext.swift */; };
+		C0BDBDBB280C74240078791A /* AddNewFriendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBDBA280C74240078791A /* AddNewFriendData.swift */; };
+		C0BDBDBD280C78360078791A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBDBC280C78360078791A /* Color+Ext.swift */; };
 		C0DC9D3D280BF86700A83C06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC9D3C280BF86700A83C06 /* User.swift */; };
 		C0DC9D3F280BF89900A83C06 /* ContactFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC9D3E280BF89900A83C06 /* ContactFilter.swift */; };
 		C0DC9D41280BFB8100A83C06 /* MyFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC9D40280BFB8100A83C06 /* MyFriendsCell.swift */; };
@@ -48,7 +50,9 @@
 		C09BF72A280C21590020F339 /* NewUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserCell.swift; sourceTree = "<group>"; };
 		C09BF72C280C22120020F339 /* AddNewFriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFriendViewModel.swift; sourceTree = "<group>"; };
 		C09BF72E280C38990020F339 /* NewUserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserCellViewModel.swift; sourceTree = "<group>"; };
-		C09BF734280C40210020F339 /* Button+Extencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extencion.swift"; sourceTree = "<group>"; };
+		C09BF734280C40210020F339 /* Button+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Ext.swift"; sourceTree = "<group>"; };
+		C0BDBDBA280C74240078791A /* AddNewFriendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFriendData.swift; sourceTree = "<group>"; };
+		C0BDBDBC280C78360078791A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		C0DC9D3C280BF86700A83C06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C0DC9D3E280BF89900A83C06 /* ContactFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFilter.swift; sourceTree = "<group>"; };
 		C0DC9D40280BFB8100A83C06 /* MyFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCell.swift; sourceTree = "<group>"; };
@@ -164,7 +168,8 @@
 		C09BF733280C40150020F339 /* Extencions */ = {
 			isa = PBXGroup;
 			children = (
-				C09BF734280C40210020F339 /* Button+Extencion.swift */,
+				C09BF734280C40210020F339 /* Button+Ext.swift */,
+				C0BDBDBC280C78360078791A /* Color+Ext.swift */,
 			);
 			path = Extencions;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			children = (
 				C0DC9D3C280BF86700A83C06 /* User.swift */,
 				C0DC9D3E280BF89900A83C06 /* ContactFilter.swift */,
+				C0BDBDBA280C74240078791A /* AddNewFriendData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -364,14 +370,16 @@
 				C09BF71D280C1B1E0020F339 /* AddNewFriendTableViewController.swift in Sources */,
 				C0DC9D3D280BF86700A83C06 /* User.swift in Sources */,
 				C09BF72B280C21590020F339 /* NewUserCell.swift in Sources */,
+				C0BDBDBB280C74240078791A /* AddNewFriendData.swift in Sources */,
 				C0DC9D43280BFCB000A83C06 /* MyFriendsCollectionViewController.swift in Sources */,
 				C09BF717280C14180020F339 /* TabBarViewController.swift in Sources */,
 				C09BF72F280C38990020F339 /* NewUserCellViewModel.swift in Sources */,
-				C09BF735280C40210020F339 /* Button+Extencion.swift in Sources */,
+				C09BF735280C40210020F339 /* Button+Ext.swift in Sources */,
 				C064705C280AEA650081F879 /* AppDelegate.swift in Sources */,
 				C09BF72D280C22120020F339 /* AddNewFriendViewModel.swift in Sources */,
 				C064705E280AEA650081F879 /* SceneDelegate.swift in Sources */,
 				C09BF729280C20F80020F339 /* ContactFilterCell.swift in Sources */,
+				C0BDBDBD280C78360078791A /* Color+Ext.swift in Sources */,
 				C09BF724280C1FE10020F339 /* ConfigurableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

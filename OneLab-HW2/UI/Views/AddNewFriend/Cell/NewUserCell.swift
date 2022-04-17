@@ -48,6 +48,7 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
     
     private let friendsLabel: UILabel = {
         let uiLabel = UILabel()
+        uiLabel.textColor = .lightGray
         uiLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         return uiLabel
     }()
@@ -76,13 +77,16 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
         uiButton.layer.cornerRadius = 14
         uiButton.layer.borderWidth = 2
         uiButton.layer.borderColor = UIColor.systemBlue.cgColor
+        uiButton.imageEdgeInsets = UIEdgeInsets(top: 2, left: 1, bottom: 2, right: 1)
+        uiButton.titleEdgeInsets = UIEdgeInsets(top: 2, left: 1, bottom: 2, right: 1)
         return uiButton
     }()
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [userImage, vStackView])
         stackView.axis = .horizontal
-        stackView.alignment = .leading
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .center
         stackView.spacing = 8
         return stackView
     }()
@@ -128,7 +132,7 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
         }
         
         addButton.snp.makeConstraints{
-            $0.width.greaterThanOrEqualTo(71)
+            $0.width.greaterThanOrEqualTo(75)
             $0.height.equalTo(28)
         }
         

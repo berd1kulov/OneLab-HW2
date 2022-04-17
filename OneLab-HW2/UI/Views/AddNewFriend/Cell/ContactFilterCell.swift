@@ -21,7 +21,7 @@ class ContactFilterCell: UITableViewCell, ConfigurableCell {
     
     private let filterLabel: UILabel = {
         let uiLabel = UILabel()
-        uiLabel.textColor = .systemBlue
+        uiLabel.textColor = UIColor.addNewContactColor
         uiLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         return uiLabel
     }()
