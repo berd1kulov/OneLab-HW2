@@ -21,11 +21,11 @@ class AddNewFriendViewModel {
         filterContactNames.append(ContactFilterCellConfigurator(item:ContactFilter(iconName: "phone.connection", filterByName: "By Phone Number")))
         
         //All users
-        users.append(NewUserCellConfigurator(item: User(imageName: "profile_1", name: "Sam Sam", speciality: "iOS developer", isOnline: .offline, friends: [])))
-        users.append(NewUserCellConfigurator(item: User(imageName: "profile_2", name: "Sam Sam", speciality: "iOS developer", isOnline: .online, friends: [])))
-        users.append(NewUserCellConfigurator(item: User(imageName: "profile_3", name: "Sam Sam", speciality: "iOS developer", isOnline: .online, friends: [])))
-        users.append(NewUserCellConfigurator(item: User(imageName: "profile_1", name: "Sam Sam", speciality: "iOS developer", isOnline: .inactive, friends: [])))
-        users.append(NewUserCellConfigurator(item: User(imageName: "profile_2", name: "Sam Sam", speciality: "iOS developer", isOnline: .online, friends: [])))
+        users.append(NewUserCellConfigurator(item: User(imageName: "profile_1", name: "Savannah Tucker", speciality: "Retail Supervisor", isOnline: .offline, friends: [])))
+        users.append(NewUserCellConfigurator(item: User(imageName: "profile_2", name: "Darrell Stewart", speciality: "UI/UX Designer", isOnline: .online, friends: [])))
+        users.append(NewUserCellConfigurator(item: User(imageName: "profile_3", name: "Jenny Wilson", speciality: "Model, Actress", isOnline: .online, friends: [])))
+        users.append(NewUserCellConfigurator(item: User(imageName: "profile_1", name: "Courtney Henry", speciality: "iOS developer", isOnline: .inactive, friends: [])))
+        users.append(NewUserCellConfigurator(item: User(imageName: "profile_2", name: "Sam Sam", speciality: "Taxi Driver", isOnline: .online, friends: [])))
         users.append(NewUserCellConfigurator(item: User(imageName: "profile_3", name: "Sam Sam", speciality: "iOS developer", isOnline: .offline, friends: [])))
         users.append(NewUserCellConfigurator(item: User(imageName: "profile_1", name: "Sam Sam", speciality: "iOS developer", isOnline: .inactive, friends: [])))
         users.append(NewUserCellConfigurator(item: User(imageName: "profile_1", name: "Sam Sam", speciality: "iOS developer", isOnline: .offline, friends: [])))
