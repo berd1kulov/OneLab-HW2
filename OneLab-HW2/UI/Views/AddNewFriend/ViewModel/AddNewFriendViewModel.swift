@@ -16,9 +16,9 @@ class AddNewFriendViewModel {
     
     func fetchAllDatas() {
         //Contancts by Filter Names
-        filterContactNames.append(ContactFilterCellConfigurator(item:ContactFilter(iconName: "book", filterByName: "From Contacts")))
-        filterContactNames.append(ContactFilterCellConfigurator(item:ContactFilter(iconName: "signature", filterByName: "By Username")))
-        filterContactNames.append(ContactFilterCellConfigurator(item:ContactFilter(iconName: "phone.connection", filterByName: "By Phone Number")))
+        filterContactNames.append(ContactFilterCellConfigurator(item:ContactFilter(iconName: "book", filterByName: "From Contacts".localized())))
+        filterContactNames.append(ContactFilterCellConfigurator(item:ContactFilter(iconName: "signature", filterByName: "By Username".localized())))
+        filterContactNames.append(ContactFilterCellConfigurator(item:ContactFilter(iconName: "phone.connection", filterByName: "By Phone Number".localized())))
         
         //All users
         users.append(NewUserCellConfigurator(item: User(imageName: "profile_1", name: "Savannah Tucker", speciality: "Retail Supervisor", isOnline: .offline, friends: [])))

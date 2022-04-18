@@ -13,7 +13,7 @@ class AddNewFriendTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Add New Friend"
+        title = "Add New Friend".localized()
         tableView.backgroundColor = .systemBackground
         tableView.separatorStyle = .none
         viewModel.fetchAllDatas()
@@ -54,9 +54,9 @@ class AddNewFriendTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 1{
-            return "\(viewModel.datas[section].sectionName) (\(viewModel.datas[section].datas.count))"
+            return "\(viewModel.datas[section].sectionName.localized()) (\(viewModel.datas[section].datas.count))"
         }
-        return viewModel.datas[section].sectionName
+        return viewModel.datas[section].sectionName.localized()
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

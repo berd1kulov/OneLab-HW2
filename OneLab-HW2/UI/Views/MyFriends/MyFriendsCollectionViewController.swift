@@ -18,7 +18,7 @@ class MyFriendsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "My Friends"
+        navigationItem.title = "My Friends".localized()
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.circle"), style: .plain, target: self, action: #selector(addNewFriendTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchFriendTapped))
         

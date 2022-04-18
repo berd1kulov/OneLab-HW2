@@ -28,6 +28,8 @@
 		C0DC9D3F280BF89900A83C06 /* ContactFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC9D3E280BF89900A83C06 /* ContactFilter.swift */; };
 		C0DC9D41280BFB8100A83C06 /* MyFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC9D40280BFB8100A83C06 /* MyFriendsCell.swift */; };
 		C0DC9D43280BFCB000A83C06 /* MyFriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC9D42280BFCB000A83C06 /* MyFriendsCollectionViewController.swift */; };
+		C0DD9910280DBB960044E08C /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DD990F280DBB960044E08C /* String+Ext.swift */; };
+		C0DD9914280DBC360044E08C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0DD9916280DBC360044E08C /* Localizable.strings */; };
 		D2276A85D5750D6072DB6478 /* Pods_OneLab_HW2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 405476EB6155CFEDE3F8E113 /* Pods_OneLab_HW2.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,10 @@
 		C0DC9D3E280BF89900A83C06 /* ContactFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFilter.swift; sourceTree = "<group>"; };
 		C0DC9D40280BFB8100A83C06 /* MyFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCell.swift; sourceTree = "<group>"; };
 		C0DC9D42280BFCB000A83C06 /* MyFriendsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCollectionViewController.swift; sourceTree = "<group>"; };
+		C0DD990F280DBB960044E08C /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		C0DD9911280DBC0B0044E08C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C0DD9915280DBC360044E08C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C0DD9917280DBC3A0044E08C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7C6F49A8F0709733B875B40 /* Pods-OneLab-HW2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLab-HW2.release.xcconfig"; path = "Target Support Files/Pods-OneLab-HW2/Pods-OneLab-HW2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,9 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				C0647069280AEA680081F879 /* Info.plist */,
-				C09BF722280C1FA60020F339 /* Configurator */,
 				C0DC9D34280BF76400A83C06 /* Application Layer */,
 				C0DC9D35280BF77000A83C06 /* Resources */,
+				C09BF722280C1FA60020F339 /* Configurator */,
 				C0DC9D36280BF78A00A83C06 /* UI */,
 				C0DC9D37280BF79200A83C06 /* Model */,
 			);
@@ -170,6 +176,7 @@
 			children = (
 				C09BF734280C40210020F339 /* Button+Ext.swift */,
 				C0BDBDBC280C78360078791A /* Color+Ext.swift */,
+				C0DD990F280DBB960044E08C /* String+Ext.swift */,
 			);
 			path = Extencions;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 				C09BF733280C40150020F339 /* Extencions */,
 				C0647064280AEA680081F879 /* Assets.xcassets */,
 				C0647066280AEA680081F879 /* LaunchScreen.storyboard */,
+				C0DD9916280DBC360044E08C /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -224,8 +232,8 @@
 		C0DC9D39280BF7D200A83C06 /* MyFriends */ = {
 			isa = PBXGroup;
 			children = (
-				C0DC9D3B280BF84000A83C06 /* ViewModel */,
 				C0DC9D3A280BF81C00A83C06 /* Cell */,
+				C0DC9D3B280BF84000A83C06 /* ViewModel */,
 				C0DC9D42280BFCB000A83C06 /* MyFriendsCollectionViewController.swift */,
 			);
 			path = MyFriends;
@@ -292,6 +300,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = C064704F280AEA650081F879;
 			productRefGroup = C0647059280AEA650081F879 /* Products */;
@@ -309,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0647068280AEA680081F879 /* LaunchScreen.storyboard in Resources */,
+				C0DD9914280DBC360044E08C /* Localizable.strings in Resources */,
 				C0647065280AEA680081F879 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +390,7 @@
 				C064705E280AEA650081F879 /* SceneDelegate.swift in Sources */,
 				C09BF729280C20F80020F339 /* ContactFilterCell.swift in Sources */,
 				C0BDBDBD280C78360078791A /* Color+Ext.swift in Sources */,
+				C0DD9910280DBB960044E08C /* String+Ext.swift in Sources */,
 				C09BF724280C1FE10020F339 /* ConfigurableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,8 +402,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				C0647067280AEA680081F879 /* Base */,
+				C0DD9911280DBC0B0044E08C /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C0DD9916280DBC360044E08C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0DD9915280DBC360044E08C /* en */,
+				C0DD9917280DBC3A0044E08C /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -402,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -448,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -462,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -502,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -527,7 +550,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -556,7 +579,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

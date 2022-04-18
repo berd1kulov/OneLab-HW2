@@ -17,13 +17,13 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
     private var added = true {
         didSet{
             if added{
-                addButton.setTitle("ADD", for: .normal)
+                addButton.setTitle("ADD".localized(), for: .normal)
                 addButton.setTitleColor(UIColor.systemBlue, for: .normal)
                 addButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
                 addButton.setImageTintColor(.systemBlue)
                 addButton.layer.borderColor = UIColor.systemBlue.cgColor
             }else{
-                addButton.setTitle("ADDED", for: .normal)
+                addButton.setTitle("ADDED".localized(), for: .normal)
                 addButton.setTitleColor(UIColor.lightGray, for: .normal)
                 addButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
                 addButton.setImageTintColor(.lightGray)
@@ -71,7 +71,7 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
     
     private let addButton: UIButton = {
         let uiButton = UIButton()
-        uiButton.setTitle("ADD", for: .normal)
+        uiButton.setTitle("ADD".localized(), for: .normal)
         uiButton.setTitleColor(UIColor.systemBlue, for: .normal)
         uiButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
         uiButton.layer.cornerRadius = 14
@@ -165,7 +165,7 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
         userImage.image = UIImage(named: data.imageName)
         isOnlineView.backgroundColor = viewModel.getIsOnlineColor(data.isOnline)
         nameLabel.text = data.name
-        friendsLabel.text = "\(data.friends.count) Friends"
+        friendsLabel.text = "\(data.friends.count) \("Friends".localized())"
     }
     
     @objc private func didAddTapped(){
