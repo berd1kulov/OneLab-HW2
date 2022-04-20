@@ -18,19 +18,34 @@ class MyFriendsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "My Friends".localized()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.circle"), style: .plain, target: self, action: #selector(addNewFriendTapped))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchFriendTapped))
-        
+        configureNavigationBar()
         setupCollectionView()
         viewModel.fetchFrends()
     }
     
+    init() {
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     fileprivate func setupCollectionView() {
         collectionView.backgroundColor = .secondarySystemBackground
         collectionView.register(MyFriendsCell.self, forCellWithReuseIdentifier: cellId)
     }
+    
+    fileprivate func configureNavigationBar(){
+        navigationItem.title = "My Friends".localized()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.circle"), style: .plain, target: self, action: #selector(addNewFriendTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchFriendTapped))
+    }
+    
+}
+
+// MARK: - CollectionView Actions
+extension MyFriendsCollectionViewController {
     
     @objc private func addNewFriendTapped(){
         print("Add New Friend")
@@ -41,19 +56,10 @@ class MyFriendsCollectionViewController: UICollectionViewController {
     @objc private func searchFriendTapped(){
         print("Search Friend")
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.frends.count
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MyFriendsCell
-        
-        let user = viewModel.frends[indexPath.item]
-        cell.user = user
-        return cell
-    }
-    
+}
+
+// MARK: - CollectionView Delegate Methods
+extension MyFriendsCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -68,18 +74,20 @@ class MyFriendsCollectionViewController: UICollectionViewController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-    
-    //we need this init when creating a collectionView Programmatically otherwise app will crash
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }
 
-extension MyFriendsCollectionViewController: UICollectionViewDelegateFlowLayout {
+// MARK: - CollectionView DataSource Methods
+extension MyFriendsCollectionViewController {
     
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.frends.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MyFriendsCell
+        
+        let user = viewModel.frends[indexPath.item]
+        cell.user = user
+        return cell
+    }
 }

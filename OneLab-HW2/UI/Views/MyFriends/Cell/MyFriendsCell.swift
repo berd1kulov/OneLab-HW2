@@ -26,6 +26,7 @@ class MyFriendsCell: UICollectionViewCell {
         image.clipsToBounds = true
         return image
     }()
+    
     private var isOnlineView: UIView = {
         let customView = UIView()
         customView.layer.cornerRadius = 5
@@ -33,6 +34,7 @@ class MyFriendsCell: UICollectionViewCell {
         customView.clipsToBounds = true
         return customView
     }()
+    
     private var nameLabel = UILabel()
     private var speciality = UILabel()
     

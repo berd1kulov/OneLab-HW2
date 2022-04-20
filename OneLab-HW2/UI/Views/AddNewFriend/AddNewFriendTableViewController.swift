@@ -18,8 +18,10 @@ class AddNewFriendTableViewController: UITableViewController {
         tableView.separatorStyle = .none
         viewModel.fetchAllDatas()
     }
-    
-    // MARK: - Table view data source
+}
+
+// MARK: - Table view data source
+extension AddNewFriendTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.datas.count
@@ -36,13 +38,10 @@ class AddNewFriendTableViewController: UITableViewController {
         item.configure(cell: cell)
         return cell
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row > 2{
-            tableView.deselectRow(at: indexPath, animated: false)
-        }else{
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-    }
+}
+
+// MARK: - Table view delegate
+extension AddNewFriendTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 1{
@@ -66,5 +65,13 @@ class AddNewFriendTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 28
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row > 2{
+            tableView.deselectRow(at: indexPath, animated: false)
+        }else{
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 }

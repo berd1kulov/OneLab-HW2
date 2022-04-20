@@ -132,7 +132,7 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
         }
         
         addButton.snp.makeConstraints{
-            $0.width.greaterThanOrEqualTo(75)
+            $0.width.greaterThanOrEqualTo(71)
             $0.height.equalTo(28)
         }
         
