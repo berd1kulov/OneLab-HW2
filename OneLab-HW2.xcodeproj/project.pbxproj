@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C050681728142C0A00EB728F /* TableDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050681628142C0A00EB728F /* TableDirector.swift */; };
+		C050681928142C2000EB728F /* CellAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050681828142C2000EB728F /* CellAction.swift */; };
+		C050681B28142C3900EB728F /* CellActionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050681A28142C3900EB728F /* CellActionProxy.swift */; };
 		C064705C280AEA650081F879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064705B280AEA650081F879 /* AppDelegate.swift */; };
 		C064705E280AEA650081F879 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064705D280AEA650081F879 /* SceneDelegate.swift */; };
 		C0647065280AEA680081F879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0647064280AEA680081F879 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* Begin PBXFileReference section */
 		0A4108D331D95FB751A067E8 /* Pods-OneLab-HW2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLab-HW2.debug.xcconfig"; path = "Target Support Files/Pods-OneLab-HW2/Pods-OneLab-HW2.debug.xcconfig"; sourceTree = "<group>"; };
 		405476EB6155CFEDE3F8E113 /* Pods_OneLab_HW2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneLab_HW2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C050681628142C0A00EB728F /* TableDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDirector.swift; sourceTree = "<group>"; };
+		C050681828142C2000EB728F /* CellAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAction.swift; sourceTree = "<group>"; };
+		C050681A28142C3900EB728F /* CellActionProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellActionProxy.swift; sourceTree = "<group>"; };
 		C0647058280AEA650081F879 /* OneLab-HW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OneLab-HW2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C064705B280AEA650081F879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C064705D280AEA650081F879 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +101,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C050681428142BDF00EB728F /* TableDirector */ = {
+			isa = PBXGroup;
+			children = (
+				C050681528142BE700EB728F /* Actions */,
+				C050681628142C0A00EB728F /* TableDirector.swift */,
+			);
+			path = TableDirector;
+			sourceTree = "<group>";
+		};
+		C050681528142BE700EB728F /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C050681828142C2000EB728F /* CellAction.swift */,
+				C050681A28142C3900EB728F /* CellActionProxy.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		C064704F280AEA650081F879 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +140,7 @@
 		C064705A280AEA650081F879 /* OneLab-HW2 */ = {
 			isa = PBXGroup;
 			children = (
+				C050681428142BDF00EB728F /* TableDirector */,
 				C0647069280AEA680081F879 /* Info.plist */,
 				C0DC9D34280BF76400A83C06 /* Application Layer */,
 				C0DC9D35280BF77000A83C06 /* Resources */,
@@ -378,6 +403,7 @@
 				C0DC9D41280BFB8100A83C06 /* MyFriendsCell.swift in Sources */,
 				C09BF721280C1D310020F339 /* MyFriensCellViewModel.swift in Sources */,
 				C09BF71D280C1B1E0020F339 /* AddNewFriendTableViewController.swift in Sources */,
+				C050681B28142C3900EB728F /* CellActionProxy.swift in Sources */,
 				C0DC9D3D280BF86700A83C06 /* User.swift in Sources */,
 				C09BF72B280C21590020F339 /* NewUserCell.swift in Sources */,
 				C0BDBDBB280C74240078791A /* AddNewFriendData.swift in Sources */,
@@ -385,11 +411,13 @@
 				C09BF717280C14180020F339 /* TabBarViewController.swift in Sources */,
 				C09BF72F280C38990020F339 /* NewUserCellViewModel.swift in Sources */,
 				C09BF735280C40210020F339 /* Button+Ext.swift in Sources */,
+				C050681928142C2000EB728F /* CellAction.swift in Sources */,
 				C064705C280AEA650081F879 /* AppDelegate.swift in Sources */,
 				C09BF72D280C22120020F339 /* AddNewFriendViewModel.swift in Sources */,
 				C064705E280AEA650081F879 /* SceneDelegate.swift in Sources */,
 				C09BF729280C20F80020F339 /* ContactFilterCell.swift in Sources */,
 				C0BDBDBD280C78360078791A /* Color+Ext.swift in Sources */,
+				C050681728142C0A00EB728F /* TableDirector.swift in Sources */,
 				C0DD9910280DBB960044E08C /* String+Ext.swift in Sources */,
 				C09BF724280C1FE10020F339 /* ConfigurableCell.swift in Sources */,
 			);

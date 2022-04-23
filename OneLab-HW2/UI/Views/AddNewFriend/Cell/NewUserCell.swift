@@ -12,6 +12,8 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
     
     typealias DataType = User
     
+    static let didAddButtonAction = "UserCellDidAddButtonAction"
+    
     var viewModel = NewUserCellViewModel()
     
     private var added = true {
@@ -101,7 +103,7 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         isUserInteractionEnabled = true
-        addButton.addTarget(self, action: #selector(didAddTapped), for: .touchUpInside)
+        addButton.addTarget(self, action: #selector(didTapAddButton), for: .touchUpInside)
         layoutUI()
     }
     
@@ -168,7 +170,8 @@ class NewUserCell: UITableViewCell, ConfigurableCell {
         friendsLabel.text = "\(data.friends.count) \("Friends".localized())"
     }
     
-    @objc private func didAddTapped(){
+    @objc private func didTapAddButton() {
+        CellAction.custom(type(of: self).didAddButtonAction).invoke(cell: self)
         added.toggle()
     }
     
